@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kayla's Clean & Sweep Co. | Manalapan, NJ</title>
+  <meta name="description" content="Professional residential and commercial cleaning services in Manalapan, NJ. Fully insured. Free quotes available." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="#" class="nav__logo">
+        <img src="img/logo.jpg" alt="Kayla's Clean & Sweep Co." />
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <a href="#services">Services</a>
+        <a href="#why">Why Kayla's</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#contact" class="nav__cta">Get a Free Quote</a>
+      </nav>
+      <button class="nav__burger" id="burger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero__bg-shape"></div>
+    <div class="container hero__inner">
+      <div class="hero__text" data-animate="fade-up">
+        <span class="eyebrow">Manalapan, NJ · Fully Insured</span>
+        <h1 class="hero__headline">
+          A cleaner home.<br />
+          <em>A clearer mind.</em>
+        </h1>
+        <p class="hero__sub">
+          Residential & commercial cleaning done right — every time. 
+          Kayla's Clean & Sweep Co. handles the mess so you can reclaim your space and your peace.
+        </p>
+        <div class="hero__actions">
+          <a href="#contact" class="btn btn--primary">Get a Free Quote</a>
+          <a href="#services" class="btn btn--ghost">See What We Do</a>
+        </div>
+        <div class="hero__trust">
+          <span>⭐⭐⭐⭐⭐ 5-star rated</span>
+          <span class="dot">·</span>
+          <span>Fully Insured</span>
+          <span class="dot">·</span>
+          <span>Locally Owned</span>
+        </div>
+      </div>
+      <div class="hero__image" data-animate="fade-in">
+        <!-- Place your hero image at img/hero.jpg -->
+        <!-- Suggested size: 700×800px, portrait orientation of a clean room or Kayla working -->
+        <div class="hero__img-wrap">
+          <img src="img/1.jpg" alt="A beautifully cleaned home" onerror="this.parentElement.classList.add('img--placeholder')" />
+          <div class="hero__img-badge">
+            <span class="badge__num">100%</span>
+            <span class="badge__label">Satisfaction<br/>Guaranteed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ============ STATS BAND ============ -->
+  <section class="stats-band">
+    <div class="container stats-band__inner">
+      <div class="stat" data-animate="fade-up">
+        <span class="stat__num" data-count="200">0</span><span class="stat__suffix">+</span>
+        <span class="stat__label">Homes Cleaned</span>
+      </div>
+      <div class="stat" data-animate="fade-up" data-delay="100">
+        <span class="stat__num" data-count="5">0</span><span class="stat__suffix">★</span>
+        <span class="stat__label">Average Rating</span>
+      </div>
+      <div class="stat" data-animate="fade-up" data-delay="200">
+        <span class="stat__num" data-count="3">0</span><span class="stat__suffix">+</span>
+        <span class="stat__label">Years in Business</span>
+      </div>
+      <div class="stat" data-animate="fade-up" data-delay="300">
+        <span class="stat__num" data-count="100">0</span><span class="stat__suffix">%</span>
+        <span class="stat__label">Insured & Trusted</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="eyebrow">What We Offer</span>
+        <h2>Cleaning, covered.</h2>
+        <p>Whether it's your home, your office, or something in between — we've got a service that fits.</p>
+      </div>
+      <div class="services__grid">
+
+        <div class="service-card" data-animate="fade-up">
+          <div class="service-card__icon">
+            <!-- SVG: house icon -->
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 20L24 6l18 14v22H30V28H18v14H6V20z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Residential Cleaning</h3>
+          <p>Deep cleans, routine maintenance, and move-in/move-out services. Your home, spotless.</p>
+          <!-- Place image at img/service-residential.jpg -->
+        </div>
+
+        <div class="service-card" data-animate="fade-up" data-delay="100">
+          <div class="service-card__icon">
+            <!-- SVG: building icon -->
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="6" width="32" height="36" rx="2" stroke="currentColor" stroke-width="2.5"/>
+              <rect x="14" y="12" width="6" height="6" rx="1" stroke="currentColor" stroke-width="2"/>
+              <rect x="28" y="12" width="6" height="6" rx="1" stroke="currentColor" stroke-width="2"/>
+              <rect x="14" y="24" width="6" height="6" rx="1" stroke="currentColor" stroke-width="2"/>
+              <rect x="28" y="24" width="6" height="6" rx="1" stroke="currentColor" stroke-width="2"/>
+              <rect x="20" y="34" width="8" height="8" rx="1" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>Commercial Cleaning</h3>
+          <p>Offices, retail spaces, and business interiors kept clean, consistent, and professional.</p>
+          <!-- Place image at img/service-commercial.jpg -->
+        </div>
+
+        <div class="service-card" data-animate="fade-up" data-delay="200">
+          <div class="service-card__icon">
+            <!-- SVG: sparkle icon -->
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 4v8M24 36v8M4 24h8M36 24h8M10.5 10.5l5.5 5.5M32 32l5.5 5.5M37.5 10.5L32 16M16 32l-5.5 5.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="24" cy="24" r="6" stroke="currentColor" stroke-width="2.5"/>
+            </svg>
+          </div>
+          <h3>Deep Clean</h3>
+          <p>A thorough top-to-bottom reset. Baseboards, inside appliances, vents — the works.</p>
+          <!-- Place image at img/service-deep.jpg -->
+        </div>
+
+        <div class="service-card" data-animate="fade-up" data-delay="300">
+          <div class="service-card__icon">
+            <!-- SVG: box icon for move -->
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 16l18-10 18 10v16L24 42 6 32V16z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+              <path d="M6 16l18 10 18-10M24 26v16" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Move-In / Move-Out</h3>
+          <p>Start fresh or leave it spotless. Perfect for renters, sellers, and new homeowners.</p>
+          <!-- Place image at img/service-move.jpg -->
+        </div>
+
+        <div class="service-card" data-animate="fade-up" data-delay="100">
+          <div class="service-card__icon">
+            <!-- SVG: recurring icon -->
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M40 24c0 8.837-7.163 16-16 16S8 32.837 8 24 15.163 8 24 8c4.418 0 8.418 1.79 11.314 4.686L40 8v10H30" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Recurring Service</h3>
+          <p>Weekly, bi-weekly, or monthly visits. Stay consistently clean without lifting a finger.</p>
+          <!-- Place image at img/service-recurring.jpg -->
+        </div>
+
+        <div class="service-card service-card--cta" data-animate="fade-up" data-delay="200">
+          <p>Not sure which service is right for you?</p>
+          <a href="#contact" class="btn btn--primary">Let's talk →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY KAYLA'S ============ -->
+  <section class="why section" id="why">
+    <div class="container why__inner">
+      <div class="why__image" data-animate="fade-in">
+        <!-- Place your image at img/about.jpg -->
+        <!-- Suggested: Photo of Kayla or a beautiful clean interior, portrait/square format -->
+        <div class="why__img-wrap">
+          <img src="img/8.jpeg" alt="Kayla cleaning a home" onerror="this.parentElement.classList.add('img--placeholder')" />
+        </div>
+        <div class="why__img-accent"></div>
+      </div>
+      <div class="why__content" data-animate="fade-up">
+        <span class="eyebrow">Why Kayla's</span>
+        <h2>You deserve a cleaner that shows up — and shows out.</h2>
+        <p>Kayla's Clean & Sweep Co. isn't a franchise. It's a locally owned, personally run cleaning service built on one simple principle: your space should feel as good as it looks.</p>
+        <ul class="why__list">
+          <li>
+            <div class="why__check">✓</div>
+            <div>
+              <strong>Fully insured</strong> — You're protected from day one, no questions asked.
+            </div>
+          </li>
+          <li>
+            <div class="why__check">✓</div>
+            <div>
+              <strong>Reliable & on time</strong> — We respect your schedule. No ghosting, no reschedules.
+            </div>
+          </li>
+          <li>
+            <div class="why__check">✓</div>
+            <div>
+              <strong>Detail-obsessed</strong> — The corners, the baseboards, behind the toilet. All of it.
+            </div>
+          </li>
+          <li>
+            <div class="why__check">✓</div>
+            <div>
+              <strong>Personalized service</strong> — Every space is different. We clean for yours.
+            </div>
+          </li>
+        </ul>
+        <a href="#contact" class="btn btn--primary">Book Your First Clean</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="testimonials section" id="testimonials">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="eyebrow">What Clients Say</span>
+        <h2>Real people. Real clean.</h2>
+      </div>
+      <div class="testimonials__grid">
+
+        <div class="testimonial-card" data-animate="fade-up">
+          <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
+          <blockquote>"I've tried four other cleaning services before Kayla's. None of them came close. She pays attention to things I didn't even know to ask for."</blockquote>
+          <div class="testimonial-card__author">
+            <!-- Place image at img/review-1.jpg (headshot, 80x80px) -->
+            <img src="img/logo.jpg" alt="Jessica M." onerror="this.style.display='none'" />
+            <div>
+              <strong>Jessica M.</strong>
+              <span>Manalapan, NJ</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card" data-animate="fade-up" data-delay="100">
+          <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
+          <blockquote>"We use Kayla for our office every two weeks. It's always spotless, she's always on time, and our team loves walking in on Monday morning."</blockquote>
+          <div class="testimonial-card__author">
+            <img src="img/logo.jpg" alt="Marcus T." onerror="this.style.display='none'" />
+            <div>
+              <strong>Marcus T.</strong>
+              <span>Freehold, NJ</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card" data-animate="fade-up" data-delay="200">
+          <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
+          <blockquote>"Move-out clean was done in one afternoon. Got my full deposit back. Kayla is a lifesaver — worth every penny and then some."</blockquote>
+          <div class="testimonial-card__author">
+            <img src="img/logo.jpg" alt="Priya L." onerror="this.style.display='none'" />
+            <div>
+              <strong>Priya L.</strong>
+              <span>Old Bridge, NJ</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ CONTACT / CTA ============ -->
+  <section class="contact section" id="contact">
+    <div class="container contact__inner">
+      <div class="contact__text" data-animate="fade-up">
+        <span class="eyebrow">Get In Touch</span>
+        <h2>Ready for a spotless space?</h2>
+        <p>Send a message and Kayla will get back to you within 24 hours with a free, no-obligation quote.</p>
+        <div class="contact__details">
+          <a href="mailto:kaylascleansweep94@gmail.com" class="contact__link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+            kaylascleansweep94@gmail.com
+          </a>
+          <a href="https://www.instagram.com/kaylasclean_sweepco/" target="_blank" rel="noopener" class="contact__link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            Follow us on Instagram
+          </a>
+        </div>
+      </div>
+      <form class="contact__form" id="contactForm" data-animate="fade-up" data-delay="100"
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            method="POST">
+        <!-- ↑ Replace YOUR_FORM_ID with your ID from formspree.io (e.g. xpwzablo) -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(732) 555-0100" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="you@email.com" required />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="service">Service Needed</label>
+            <select id="service" name="service">
+              <option value="">Select a service...</option>
+              <option>Residential Cleaning</option>
+              <option>Commercial Cleaning</option>
+              <option>Deep Clean</option>
+              <option>Move-In / Move-Out</option>
+              <option>Recurring Service</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="size">Home Size</label>
+            <select id="size" name="size">
+              <option value="">Approx. sq ft...</option>
+              <option>Under 1,000 sq ft</option>
+              <option>1,000 – 2,000 sq ft</option>
+              <option>2,000 – 3,000 sq ft</option>
+              <option>3,000+ sq ft</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">Anything else?</label>
+          <textarea id="message" name="message" rows="4" placeholder="Tell us about your space, any special requests, preferred days..."></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full">Send My Free Quote Request ✨</button>
+        <p class="form__note">We'll respond within 24 hours. No spam, ever.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="img/logo.jpg" alt="Kayla's Clean & Sweep Co." />
+        <p>Clear space. Clear mind.<br />Serving Manalapan, NJ and surrounding areas.</p>
+      </div>
+      <div class="footer__nav">
+        <h4>Quick Links</h4>
+        <a href="#services">Services</a>
+        <a href="#why">Why Kayla's</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer__contact">
+        <h4>Get In Touch</h4>
+        <a href="mailto:kaylascleansweep94@gmail.com">kaylascleansweep94@gmail.com</a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+        <span>Manalapan, NJ</span>
+        <span>Fully Insured</span>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <span>© 2025 Kayla's Clean & Sweep Co. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
