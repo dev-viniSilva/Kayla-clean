@@ -128,12 +128,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // ---------- CONTACT FORM — FORMSPREE ----------
+  // Formspree owns the actual submit + redirect (native form action/
+  // method, no preventDefault here). This handler ONLY shows a
+  // "Sending…" state while the browser navigates away. No fade/animate
+  // classes are touched, and the disabled state can never get stuck:
+  // - on success, the browser navigates to Formspree's redirect/thank-you
+  //   page, so this page (and its disabled button) goes away entirely
+  // - on failure (offline, blocked request, validation fail before
+  //   submit fires), the button is restored after a timeout so the
+  //   user can fix the issue and try again
   const form = document.getElementById('contactForm');
   if (form) {
     form.addEventListener('submit', () => {
       const btn = form.querySelector('button[type="submit"]');
+      if (!btn || btn.disabled) return;
+
+      const originalText = btn.textContent;
       btn.textContent = 'Sending…';
       btn.disabled = true;
+
+      // Safety net: if navigation hasn't happened (failed/offline
+      // submit) within 8s, restore the button instead of leaving it
+      // stuck forever.
+      setTimeout(() => {
+        if (document.body.contains(btn)) {
+          btn.textContent = originalText;
+          btn.disabled = false;
+        }
+      }, 8000);
     });
   }
 
