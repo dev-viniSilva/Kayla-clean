@@ -57,9 +57,7 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   max-width: 100%;
-
 }
-
 
 img {
   max-width: 100%;
@@ -81,6 +79,7 @@ ul {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 24px;
+  overflow-x: hidden;
 }
 
 .section {
@@ -334,6 +333,7 @@ p {
   align-items: center;
   position: relative;
   z-index: 1;
+  max-width: 100%;
 }
 
 .hero__text {
@@ -485,6 +485,7 @@ p {
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
   text-align: center;
+  max-width: 100%;
 }
 
 .stat {
@@ -528,6 +529,7 @@ p {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+  max-width: 100%;
 }
 
 .service-card {
@@ -598,6 +600,7 @@ p {
   grid-template-columns: 1fr 1fr;
   gap: 80px;
   align-items: center;
+  max-width: 100%;
 }
 
 .why__img-wrap {
@@ -697,6 +700,7 @@ p {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+  max-width: 100%;
 }
 
 .testimonial-card {
@@ -763,6 +767,7 @@ p {
   grid-template-columns: 1fr 1.4fr;
   gap: 80px;
   align-items: flex-start;
+  max-width: 100%;
 }
 
 .contact__text .eyebrow {
@@ -889,6 +894,7 @@ textarea {
   gap: 48px;
   padding-bottom: 56px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  max-width: 100%;
 }
 
 .footer__brand img {
@@ -992,6 +998,16 @@ textarea {
     display: none;
   }
 
+  .hero__img-badge {
+    bottom: -12px;
+    left: 0;
+  }
+
+  .why__img-accent {
+    bottom: 0;
+    right: 0;
+  }
+
   .stats-band__inner {
     grid-template-columns: repeat(2, 1fr);
     gap: 32px;
@@ -1080,8 +1096,12 @@ textarea {
 
   .hero__img-badge {
     bottom: -12px;
-    left: -12px;
-    padding: 14px 18px;
+    left: 0;
+  }
+
+  .why__img-accent {
+    bottom: 0;
+    right: 0;
   }
 
   .footer__inner {
