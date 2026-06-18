@@ -1,7 +1,3 @@
-/* ============================================================
-   KAYLA'S CLEAN & SWEEP CO. — script.js
-   ============================================================ */
-
 document.addEventListener('DOMContentLoaded', () => {
 
   // ---------- NAV SCROLL EFFECT ----------
@@ -20,17 +16,36 @@ document.addEventListener('DOMContentLoaded', () => {
   const burger = document.getElementById('burger');
   const navLinks = document.getElementById('navLinks');
 
+  function closeMobileMenu() {
+    burger.classList.remove('open');
+    navLinks.classList.remove('open');
+  }
+
   burger.addEventListener('click', () => {
+    const opening = !navLinks.classList.contains('open');
     burger.classList.toggle('open');
     navLinks.classList.toggle('open');
+    // Scroll lock applies ONLY while the dropdown menu is open, and
+    // is always paired with an unlock below, so it can never persist
+    // and block scrolling on the rest of the page.
+    document.body.style.overflow = opening ? 'hidden' : '';
   });
 
-  // Close menu when a link is clicked
   navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
-      burger.classList.remove('open');
-      navLinks.classList.remove('open');
+      closeMobileMenu();
+      document.body.style.overflow = '';
     });
+  });
+
+  // Safety net: if the viewport is resized past the mobile
+  // breakpoint while the menu is open, force-close it and release
+  // the scroll lock so it can never get stuck.
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768 && navLinks.classList.contains('open')) {
+      closeMobileMenu();
+      document.body.style.overflow = '';
+    }
   });
 
 
@@ -81,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const tick = (now) => {
       const elapsed = now - start;
       const progress = Math.min(elapsed / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3); // ease out cubic
+      const eased = 1 - Math.pow(1 - progress, 3);
       const value = Math.round(eased * target);
       el.textContent = value;
       if (progress < 1) requestAnimationFrame(tick);
@@ -113,12 +128,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // ---------- CONTACT FORM — FORMSPREE ----------
-  // The form posts natively to Formspree via the action attribute in index.html.
-  // Just replace YOUR_FORM_ID in the form's action="" with your real Formspree ID.
-  // Formspree handles sending the email and redirecting after submission.
-  // No JS needed here — everything works out of the box.
-  //
-  // Optional: add a loading state while the form submits
   const form = document.getElementById('contactForm');
   if (form) {
     form.addEventListener('submit', () => {
@@ -135,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const target = document.querySelector(this.getAttribute('href'));
       if (!target) return;
       e.preventDefault();
-      const offset = 80; // nav height
+      const offset = 80;
       const top = target.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top, behavior: 'smooth' });
     });
